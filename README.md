@@ -1,6 +1,17 @@
-#Unofficial Omniauth Strategy for Survey Monkey
+#Surveymonkey Strategy for OmniAuth
 
-Survey Monkey Oauth Strategy for Omniauth 1.0
+SurveyMonkey OAuth2 strategy for OmniAuth 1.0.
+
+# Usage
+
+In your config/initializers/omniauth.rb:
+
+    OmniAuth.config.logger = Rails.logger
+    Rails.application.config.middleware.use OmniAuth::Builder do
+      provider :surveymonkey, api_key: SURVEYMONKEY_API_KEY, client_secret: SURVEYMONKEY_API_SECRET,  client_id: SURVEYMONKEY_API_SECRET
+    end
+
+Note that this differs from normal Omniauth configurations!
 
 #License
 
