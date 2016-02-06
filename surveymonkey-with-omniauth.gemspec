@@ -15,6 +15,7 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version = OmniAuth::Surveymonkey::VERSION
   gem.homepage = "https://github.com/wqsaali/surveymonkey-with-omniauth"
+  gem.documentation = "https://github.com/wqsaali/surveymonkey-with-omniauth"
 
   gem.add_runtime_dependency 'omniauth-oauth2'
 

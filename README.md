@@ -1,8 +1,11 @@
 #Surveymonkey Strategy for OmniAuth
 
 SurveyMonkey OAuth2 strategy for OmniAuth 1.0.
-
-# Usage
+## Get Started
+```ruby
+gem 'surveymonkey-with-omniauth'
+```
+## Usage
 
 In your config/initializers/omniauth.rb:
 
