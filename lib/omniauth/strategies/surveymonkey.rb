@@ -33,6 +33,12 @@ module OmniAuth
         self.access_token = build_access_token
         self.env['omniauth.auth'] = auth_hash
         call_app!
+        rescue ::OAuth2::Error, CallbackError => e
+          fail!(:invalid_credentials, e)
+        rescue ::Timeout::Error, ::Errno::ETIMEDOUT => e
+          fail!(:timeout, e)
+        rescue ::SocketError => e
+          fail!(:failed_to_connect, e)
       end
 
       def token_params

@@ -1,7 +1,14 @@
 require File.expand_path('../lib/omniauth/surveymonkey/version', __FILE__)
 
 Gem::Specification.new do |gem|
-  gem.add_dependency 'omniauth', '~> 1.0'
+  gem.add_dependency 'omniauth'
+  gem.add_dependency 'oauth2'
+  gem.add_dependency 'omniauth-oauth2'
+
+  gem.add_development_dependency 'rspec', '~> 2.7'
+  gem.add_development_dependency 'rack-test'
+  gem.add_development_dependency 'webmock'
+  gem.add_development_dependency 'simplecov'
 
   gem.authors = ["Waqas Ali"]
   gem.email = ["wqsaali@gmail.com"]
@@ -15,10 +22,5 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version = OmniAuth::Surveymonkey::VERSION
   gem.homepage = "https://github.com/wqsaali/surveymonkey-with-omniauth"
-
-  gem.add_runtime_dependency 'omniauth-oauth2'
-
-  gem.add_development_dependency 'rspec', '~> 1.3.1'
-  gem.add_development_dependency 'rake'
   gem.license = 'MIT'
 end
