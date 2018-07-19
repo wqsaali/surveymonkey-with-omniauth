@@ -7,5 +7,5 @@ end
 
 desc "Build and release the gem"
 task :release => :build do
-  system "gem push osurveymonkey-with-omniauth-#{OmniAuth::Eloqua::VERSION}.gem"
+  system "gem push osurveymonkey-with-omniauth-#{OmniAuth::Surveymonkey::VERSION}.gem"
 end
